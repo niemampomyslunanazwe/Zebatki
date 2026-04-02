@@ -12,70 +12,51 @@
         }
 
         body {
-            background: #c0c0c0;
+            background: #b0b0b0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
             padding: 40px;
-            font-family: 'Segoe UI', 'Arial', sans-serif;
         }
 
-        .card {
-            max-width: 900px;
-            width: 100%;
+        .container {
             background: white;
-            padding: 30px 35px 35px 35px;
+            width: 650px;
+            padding: 40px 50px 45px 50px;
         }
 
         h1 {
-            font-size: 42px;
+            font-size: 36px;
             font-weight: 800;
-            font-family: 'Arial Black', 'Segoe UI', sans-serif;
+            font-family: 'Arial Black', 'Arial', sans-serif;
             color: black;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
+            margin-bottom: 35px;
+            text-align: left;
         }
 
-        .top-row {
+        .colors-row {
             display: flex;
-            gap: 50px;
+            gap: 30px;
             margin-bottom: 35px;
             flex-wrap: wrap;
         }
 
-        .colors-section {
-            flex: 1;
-            min-width: 180px;
-        }
-
-        .colors-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: black;
-        }
-
-        .color-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .color-row {
+        .color-item {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
 
         .color-square {
-            width: 32px;
-            height: 32px;
+            width: 30px;
+            height: 30px;
             border: 1px solid #888;
         }
 
         .color-name {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
             color: black;
         }
@@ -86,12 +67,9 @@
         .brown-bg { background-color: #8B5A2B; }
         .yellow-bg { background-color: #F5C542; }
 
-        .image-section {
-            flex: 1;
-            min-width: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .image-wrapper {
+            margin-bottom: 35px;
+            text-align: center;
         }
 
         .gear-image {
@@ -101,47 +79,41 @@
         }
 
         .author {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: black;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="card">
+    <div class="container">
         <h1>KURS RYSOWANIA ZĘBATEK</h1>
 
-        <div class="top-row">
-            <div class="colors-section">
-                <div class="colors-title">Lista użytych kolorów:</div>
-                <div class="color-list">
-                    <div class="color-row">
-                        <div class="color-square white-bg"></div>
-                        <span class="color-name">Biały</span>
-                    </div>
-                    <div class="color-row">
-                        <div class="color-square black-bg"></div>
-                        <span class="color-name">Czarny</span>
-                    </div>
-                    <div class="color-row">
-                        <div class="color-square gray-bg"></div>
-                        <span class="color-name">Szary</span>
-                    </div>
-                    <div class="color-row">
-                        <div class="color-square brown-bg"></div>
-                        <span class="color-name">Brązowy</span>
-                    </div>
-                    <div class="color-row">
-                        <div class="color-square yellow-bg"></div>
-                        <span class="color-name">Żółty</span>
-                    </div>
-                </div>
+        <div class="colors-row">
+            <div class="color-item">
+                <div class="color-square white-bg"></div>
+                <span class="color-name">Biały</span>
             </div>
+            <div class="color-item">
+                <div class="color-square black-bg"></div>
+                <span class="color-name">Czarny</span>
+            </div>
+            <div class="color-item">
+                <div class="color-square gray-bg"></div>
+                <span class="color-name">Szary</span>
+            </div>
+            <div class="color-item">
+                <div class="color-square brown-bg"></div>
+                <span class="color-name">Brązowy</span>
+            </div>
+            <div class="color-item">
+                <div class="color-square yellow-bg"></div>
+                <span class="color-name">Żółty</span>
+            </div>
+        </div>
 
-            <div class="image-section">
-                <img src="zebatki.png" alt="Zębatki" class="gear-image">
-            </div>
+        <div class="image-wrapper">
+            <img src="zebatki.png" alt="Zębatki" class="gear-image">
         </div>
 
         <div class="author">AUTOR : PATRYK MIKA</div>
