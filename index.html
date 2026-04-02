@@ -12,77 +12,86 @@
         }
 
         body {
-            background: #d9d9d9;
-            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: #c0c0c0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 40px;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
         }
 
         .card {
-            max-width: 750px;
+            max-width: 900px;
             width: 100%;
             background: white;
-            padding: 35px 40px 40px 40px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px 35px 35px 35px;
         }
 
         h1 {
-            font-size: 38px;
+            font-size: 42px;
             font-weight: 800;
-            font-family: 'Segoe UI', 'Arial Black', sans-serif;
+            font-family: 'Arial Black', 'Segoe UI', sans-serif;
             color: black;
             margin-bottom: 30px;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
-        .colors-label {
+        .top-row {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .colors-section {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .colors-title {
             font-size: 16px;
             font-weight: 600;
-            color: #222;
             margin-bottom: 12px;
+            color: black;
         }
 
-        .colors-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 28px;
-            align-items: center;
-            margin-bottom: 35px;
-        }
-
-        .color-box {
+        .color-list {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 6px;
+            gap: 10px;
         }
 
-        .circle {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            border: 1px solid #bbb;
+        .color-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .color-square {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #888;
         }
 
         .color-name {
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 500;
-            color: #1a1a1a;
-            text-transform: uppercase;
+            color: black;
         }
 
-        .white { background-color: #FFFFFF; border: 1px solid #999; }
-        .black { background-color: #000000; }
-        .gray { background-color: #9E9E9E; }
-        .brown { background-color: #8B5A2B; }
-        .yellow { background-color: #F5C542; }
+        .white-bg { background-color: #FFFFFF; }
+        .black-bg { background-color: #000000; }
+        .gray-bg { background-color: #9E9E9E; }
+        .brown-bg { background-color: #8B5A2B; }
+        .yellow-bg { background-color: #F5C542; }
 
-        .image-container {
-            margin: 20px 0 30px 0;
-            text-align: center;
+        .image-section {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .gear-image {
@@ -95,8 +104,7 @@
             font-size: 18px;
             font-weight: 700;
             color: black;
-            margin-top: 15px;
-            letter-spacing: 0.5px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -104,32 +112,36 @@
     <div class="card">
         <h1>KURS RYSOWANIA ZĘBATEK</h1>
 
-        <div class="colors-label">Lista użytych kolorów:</div>
-        <div class="colors-row">
-            <div class="color-box">
-                <div class="circle white"></div>
-                <span class="color-name">Biały</span>
+        <div class="top-row">
+            <div class="colors-section">
+                <div class="colors-title">Lista użytych kolorów:</div>
+                <div class="color-list">
+                    <div class="color-row">
+                        <div class="color-square white-bg"></div>
+                        <span class="color-name">Biały</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-square black-bg"></div>
+                        <span class="color-name">Czarny</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-square gray-bg"></div>
+                        <span class="color-name">Szary</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-square brown-bg"></div>
+                        <span class="color-name">Brązowy</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-square yellow-bg"></div>
+                        <span class="color-name">Żółty</span>
+                    </div>
+                </div>
             </div>
-            <div class="color-box">
-                <div class="circle black"></div>
-                <span class="color-name">Czarny</span>
-            </div>
-            <div class="color-box">
-                <div class="circle gray"></div>
-                <span class="color-name">Szary</span>
-            </div>
-            <div class="color-box">
-                <div class="circle brown"></div>
-                <span class="color-name">Brązowy</span>
-            </div>
-            <div class="color-box">
-                <div class="circle yellow"></div>
-                <span class="color-name">Żółty</span>
-            </div>
-        </div>
 
-        <div class="image-container">
-            <img src="zebatki.png" alt="Zębatki" class="gear-image">
+            <div class="image-section">
+                <img src="zebatki.png" alt="Zębatki" class="gear-image">
+            </div>
         </div>
 
         <div class="author">AUTOR : PATRYK MIKA</div>
