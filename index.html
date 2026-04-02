@@ -12,86 +12,127 @@
         }
 
         body {
-            background: #f0f0f0;
+            background: #1a1a1a;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            font-family: 'Arial', 'Segoe UI', sans-serif;
             padding: 40px;
         }
 
-        .container {
+        .card {
+            max-width: 750px;
+            width: 100%;
             background: white;
-            width: 600px;
-            padding: 40px 50px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 35px 40px 40px 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
         h1 {
-            font-size: 32px;
+            font-size: 38px;
             font-weight: 800;
-            font-family: 'Arial Black', 'Arial', sans-serif;
+            font-family: 'Arial Black', 'Segoe UI', sans-serif;
             color: black;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            text-align: left;
         }
 
-        .info-text {
-            font-size: 14px;
-            color: black;
-            margin-bottom: 20px;
-            font-style: italic;
+        .colors-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 15px;
         }
 
-        .colors-title {
-            font-size: 14px;
-            font-weight: normal;
-            margin-bottom: 10px;
-            color: black;
+        .colors-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: center;
+            margin-bottom: 30px;
         }
 
-        .colors-list {
-            margin-left: 25px;
-            margin-bottom: 25px;
+        .color-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
         }
 
-        .colors-list li {
-            font-size: 14px;
-            color: black;
-            margin-bottom: 3px;
+        .color-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .color-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .white-bg { background-color: #FFFFFF; border: 1px solid #999; }
+        .black-bg { background-color: #000000; }
+        .gray-bg { background-color: #9E9E9E; }
+        .brown-bg { background-color: #8B5A2B; }
+        .yellow-bg { background-color: #F5C542; }
+
+        .image-container {
+            margin: 20px 0 30px 0;
+            text-align: center;
+        }
+
+        .gear-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .author {
-            font-size: 14px;
-            font-weight: bold;
+            font-size: 16px;
+            font-weight: 700;
             color: black;
-            margin-top: 20px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="card">
         <h1>KURS RYSOWANIA ZĘBATEK</h1>
 
-        <div class="info-text">
-            (rysunek zębatek wykonaj w programie graficznym)
+        <div class="colors-label">Lista użytych kolorów:</div>
+        <div class="colors-row">
+            <div class="color-item">
+                <div class="color-circle white-bg"></div>
+                <span class="color-name">Biały</span>
+            </div>
+            <div class="color-item">
+                <div class="color-circle black-bg"></div>
+                <span class="color-name">Czarny</span>
+            </div>
+            <div class="color-item">
+                <div class="color-circle gray-bg"></div>
+                <span class="color-name">Szary</span>
+            </div>
+            <div class="color-item">
+                <div class="color-circle brown-bg"></div>
+                <span class="color-name">Brązowy</span>
+            </div>
+            <div class="color-item">
+                <div class="color-circle yellow-bg"></div>
+                <span class="color-name">Żółty</span>
+            </div>
         </div>
 
-        <div class="colors-title">
-            Lista użytych kolorów:
+        <div class="image-container">
+            <img src="zebatki.png" alt="Zębatki" class="gear-image">
         </div>
 
-        <ul class="colors-list">
-            <li>Biały</li>
-            <li>Czarny</li>
-            <li>Szary</li>
-            <li>Brązowy</li>
-            <li>Żółty</li>
-        </ul>
-
-        <div class="author">
-            AUTOR : PATRYK MIKA
-        </div>
+        <div class="author">AUTOR : PATRYK MIKA</div>
     </div>
 </body>
 </html>
