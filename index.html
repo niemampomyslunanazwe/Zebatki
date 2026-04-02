@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurs Rysowania Zębatek | Patryk Mika</title>
+    <title>Kurs Rysowania Zębatek</title>
     <style>
         * {
             margin: 0;
@@ -12,327 +12,127 @@
         }
 
         body {
-            background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
-            font-family: 'Segoe UI', 'Poppins', 'Montserrat', system-ui, -apple-system, 'Roboto', sans-serif;
-            min-height: 100vh;
+            background: #d9d9d9;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 2rem;
+            min-height: 100vh;
+            padding: 40px;
         }
 
         .card {
-            max-width: 1300px;
+            max-width: 750px;
             width: 100%;
-            background-color: white;
-            border-radius: 2.5rem;
-            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.2s ease;
+            background: white;
+            padding: 35px 40px 40px 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .hero {
-            background-color: #6b4c3b;
-            padding: 2rem 2rem 1.5rem 2rem;
-            text-align: center;
-            border-bottom: 6px solid #f5c542;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            letter-spacing: -0.5px;
+        h1 {
+            font-size: 38px;
             font-weight: 800;
-            color: white;
-            text-shadow: 3px 3px 0 #3a2a1f;
-            word-break: keep-all;
+            font-family: 'Segoe UI', 'Arial Black', sans-serif;
+            color: black;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
         }
 
-        .hero h1 span {
-            background-color: #f5c542;
-            padding: 0 12px;
-            border-radius: 60px;
-            font-size: 2rem;
-            display: inline-block;
-            vertical-align: middle;
-            margin: 0 6px;
-            box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
+        .colors-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 12px;
         }
 
-        .hero-tag {
-            color: #f9e0b0;
-            font-weight: 500;
-            margin-top: 0.75rem;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-        }
-
-        .main-grid {
+        .colors-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
-            padding: 2.5rem;
-            background: white;
+            gap: 28px;
+            align-items: center;
+            margin-bottom: 35px;
         }
 
-        .visual-panel {
-            flex: 1.2;
-            min-width: 260px;
+        .color-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
         }
 
-        .gear-art {
-            background-color: #f2f2f2;
-            border-radius: 2rem;
-            padding: 1.8rem 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 12px 20px -10px rgba(0,0,0,0.1);
+        .circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 1px solid #bbb;
+        }
+
+        .color-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: #1a1a1a;
+            text-transform: uppercase;
+        }
+
+        .white { background-color: #FFFFFF; border: 1px solid #999; }
+        .black { background-color: #000000; }
+        .gray { background-color: #9E9E9E; }
+        .brown { background-color: #8B5A2B; }
+        .yellow { background-color: #F5C542; }
+
+        .image-container {
+            margin: 20px 0 30px 0;
             text-align: center;
-            border: 1px solid #e0e0e0;
-            transition: all 0.2s;
         }
 
         .gear-image {
             max-width: 100%;
             height: auto;
-            margin-bottom: 1rem;
-            border-radius: 1rem;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            display: block;
         }
 
-        .color-palette {
-            background: #fef7e8;
-            border-radius: 1.5rem;
-            padding: 1.2rem 1.5rem;
-            border-left: 8px solid #6b4c3b;
-            margin-top: 1rem;
-        }
-
-        .color-palette h3 {
-            font-size: 1.5rem;
+        .author {
+            font-size: 18px;
             font-weight: 700;
-            color: #1e1e1e;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            color: black;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
         }
-
-        .color-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.2rem;
-            align-items: center;
-        }
-
-        .color-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            background: white;
-            padding: 8px 18px;
-            border-radius: 60px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-
-        .color-badge {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            border: 2px solid #ddd;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-        }
-
-        .color-name {
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .info-panel {
-            flex: 1;
-            min-width: 260px;
-            background: #f9f9f9;
-            border-radius: 1.8rem;
-            padding: 1.8rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            border: 1px solid #ebebeb;
-        }
-
-        .kurs-desc {
-            margin-bottom: 2rem;
-        }
-
-        .kurs-desc h2 {
-            font-size: 1.9rem;
-            font-weight: 800;
-            color: #2c2c2c;
-            border-left: 6px solid #f5c542;
-            padding-left: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .kurs-desc p {
-            color: #333;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .feature-list li {
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 500;
-            color: #2d2d2d;
-        }
-
-        .feature-list li::before {
-            content: "⚙️";
-            font-size: 1.2rem;
-        }
-
-        .autor-section {
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 2px dashed #c0b7a8;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-        }
-
-        .autor {
-            font-size: 1.2rem;
-            font-weight: 700;
-            background: #6b4c3b;
-            display: inline-block;
-            padding: 0.5rem 1.2rem;
-            border-radius: 40px;
-            color: white;
-            letter-spacing: 1px;
-        }
-
-        .autor small {
-            font-weight: 400;
-            font-size: 0.8rem;
-        }
-
-        .cta-button {
-            background-color: #f5c542;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 40px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            color: #2c1c12;
-            cursor: pointer;
-            transition: 0.2s;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            font-family: inherit;
-        }
-
-        .cta-button:hover {
-            background-color: #e0b032;
-            transform: scale(0.97);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-        }
-
-        .footer-note {
-            background: #1e1e1e;
-            color: #bcbcbc;
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.75rem;
-            border-top: 1px solid #333;
-        }
-
-        @media (max-width: 800px) {
-            body {
-                padding: 1rem;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .main-grid {
-                padding: 1.5rem;
-                gap: 1.2rem;
-            }
-            .color-list {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 550px) {
-            .hero h1 {
-                font-size: 1.6rem;
-            }
-            .kurs-desc h2 {
-                font-size: 1.5rem;
-            }
-        }
-
-        .bg-white-sample { background-color: #FFFFFF; }
-        .bg-black-sample { background-color: #1F1F1F; }
-        .bg-gray-sample { background-color: #9E9E9E; }
-        .bg-brown-sample { background-color: #8B5A2B; }
-        .bg-yellow-sample { background-color: #F5C542; }
     </style>
 </head>
 <body>
-<div class="card">
-    <div class="hero">
-        <h1>
-            KURS <span>RYSOWANIA</span> ZĘBATEK
-        </h1>
-        <div class="hero-tag">Projektowanie techniczne · Rysunek odręczny i CAD</div>
-    </div>
+    <div class="card">
+        <h1>KURS RYSOWANIA ZĘBATEK</h1>
 
-    <div class="main-grid">
-        <div class="visual-panel">
-            <div class="gear-art">
-                <img src="zebatki.png" alt="Rysunek zębatek" class="gear-image" style="width:100%; max-width:380px; margin:0 auto; display:block;">
-                <p style="font-size: 0.8rem; color: #6c6c6c; margin-top: 12px;">Zębatki zaprojektowane w programie graficznym</p>
+        <div class="colors-label">Lista użytych kolorów:</div>
+        <div class="colors-row">
+            <div class="color-box">
+                <div class="circle white"></div>
+                <span class="color-name">Biały</span>
             </div>
-
-            <div class="color-palette">
-                <h3>Paleta barw kursu</h3>
-                <div class="color-list">
-                    <div class="color-item"><div class="color-badge bg-white-sample" style="border:1px solid #aaa;"></div><span class="color-name">Biały</span></div>
-                    <div class="color-item"><div class="color-badge bg-black-sample"></div><span class="color-name">Czarny</span></div>
-                    <div class="color-item"><div class="color-badge bg-gray-sample"></div><span class="color-name">Szary</span></div>
-                    <div class="color-item"><div class="color-badge bg-brown-sample"></div><span class="color-name">Brązowy</span></div>
-                    <div class="color-item"><div class="color-badge bg-yellow-sample"></div><span class="color-name">Żółty</span></div>
-                </div>
+            <div class="color-box">
+                <div class="circle black"></div>
+                <span class="color-name">Czarny</span>
+            </div>
+            <div class="color-box">
+                <div class="circle gray"></div>
+                <span class="color-name">Szary</span>
+            </div>
+            <div class="color-box">
+                <div class="circle brown"></div>
+                <span class="color-name">Brązowy</span>
+            </div>
+            <div class="color-box">
+                <div class="circle yellow"></div>
+                <span class="color-name">Żółty</span>
             </div>
         </div>
 
-        <div class="info-panel">
-            <div class="kurs-desc">
-                <h2>O kursie</h2>
-                <p>Naucz się rysować precyzyjne zębatki techniką odręczną oraz w programach CAD. Kurs prowadzi od podstaw geometrii koła zębatego do zaawansowanych technik cieniowania i renderingu.</p>
-                <ul class="feature-list">
-                    <li>Teoria zazębienia i modułu</li>
-                    <li>Rysunek techniczny zębatek</li>
-                    <li>Perspektywa i detale</li>
-                    <li>Projektowanie w grafice wektorowej</li>
-                </ul>
-            </div>
-            <div class="autor-section">
-                <div class="autor">AUTOR : PATRYK MIKA</div>
-                <button class="cta-button">Zapisz się na kurs</button>
-            </div>
+        <div class="image-container">
+            <img src="zebatki.png" alt="Zębatki" class="gear-image">
         </div>
+
+        <div class="author">AUTOR : PATRYK MIKA</div>
     </div>
-    <div class="footer-note">
-        Kurs rysowania zębatek | Projekt graficzny i merytoryka
-    </div>
-</div>
 </body>
 </html>
