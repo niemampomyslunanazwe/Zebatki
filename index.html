@@ -1,138 +1,106 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurs Rysowania Zębatek</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<title>Kurs rysowania zębatek</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ccc;
+    }
 
-        body {
-            background: #1a1a1a;
-            font-family: 'Segoe UI', 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 40px;
-        }
+    .container {
+        width: 900px;
+        margin: 20px auto;
+        border: 4px solid #ddd;
+        background-color: white;
+    }
 
-        .card {
-            max-width: 750px;
-            width: 100%;
-            background: white;
-            padding: 35px 40px 40px 40px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
+    .header {
+        background-color: #4b5d7a;
+        color: #f0e6a6;
+        text-align: center;
+        padding: 15px;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
 
-        h1 {
-            font-size: 38px;
-            font-weight: 800;
-            font-family: 'Arial Black', 'Segoe UI', sans-serif;
-            color: black;
-            margin-bottom: 30px;
-            text-align: left;
-        }
+    .content {
+        display: flex;
+        background: linear-gradient(to right, #5fa1cc 50%, #7fb1d4 50%);
+        padding: 30px;
+    }
 
-        .colors-label {
-            font-size: 16px;
-            font-weight: 600;
-            color: #222;
-            margin-bottom: 15px;
-        }
+    .left {
+        width: 50%;
+        color: white;
+        font-size: 18px;
+    }
 
-        .colors-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+    .left ul {
+        margin-top: 15px;
+    }
 
-        .color-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-        }
+    .left li {
+        margin-bottom: 8px;
+    }
 
-        .color-circle {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 2px solid #ccc;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-        }
+    .right {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        .color-name {
-            font-size: 13px;
-            font-weight: 600;
-            color: #1a1a1a;
-        }
+    .right img {
+        width: 300px;
+        height: auto;
+        background-color: #eee;
+        padding: 10px;
+    }
 
-        .white-bg { background-color: #FFFFFF; border: 1px solid #999; }
-        .black-bg { background-color: #000000; }
-        .gray-bg { background-color: #9E9E9E; }
-        .brown-bg { background-color: #8B5A2B; }
-        .yellow-bg { background-color: #F5C542; }
-
-        .image-container {
-            margin: 20px 0 30px 0;
-            text-align: center;
-        }
-
-        .gear-image {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .author {
-            font-size: 16px;
-            font-weight: 700;
-            color: black;
-            margin-top: 10px;
-        }
-    </style>
+    .footer {
+        background-color: #4b5d7a;
+        color: #f0e6a6;
+        text-align: right;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+</style>
 </head>
+
 <body>
-    <div class="card">
-        <h1>KURS RYSOWANIA ZĘBATEK</h1>
 
-        <div class="colors-label">Lista użytych kolorów:</div>
-        <div class="colors-row">
-            <div class="color-item">
-                <div class="color-circle white-bg"></div>
-                <span class="color-name">Biały</span>
-            </div>
-            <div class="color-item">
-                <div class="color-circle black-bg"></div>
-                <span class="color-name">Czarny</span>
-            </div>
-            <div class="color-item">
-                <div class="color-circle gray-bg"></div>
-                <span class="color-name">Szary</span>
-            </div>
-            <div class="color-item">
-                <div class="color-circle brown-bg"></div>
-                <span class="color-name">Brązowy</span>
-            </div>
-            <div class="color-item">
-                <div class="color-circle yellow-bg"></div>
-                <span class="color-name">Żółty</span>
-            </div>
-        </div>
+<div class="container">
 
-        <div class="image-container">
-            <img src="zebatki.png" alt="Zębatki" class="gear-image">
-        </div>
-
-        <div class="author">AUTOR : PATRYK MIKA</div>
+    <div class="header">
+        KURS RYSOWANIA ZĘBATEK
     </div>
+
+    <div class="content">
+        <div class="left">
+            <p><strong>Lista użytych kolorów:</strong></p>
+            <ul>
+                <li>Biały</li>
+                <li>Czarny</li>
+                <li>Szary</li>
+                <li>Brązowy</li>
+                <li>Żółty</li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <img src="zebatki.png" alt="Zębatki">
+        </div>
+    </div>
+
+    <div class="footer">
+        AUTOR : PATRYK MIKA
+    </div>
+
+</div>
+
 </body>
 </html>
